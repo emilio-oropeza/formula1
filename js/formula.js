@@ -13,7 +13,7 @@ $(document).ready(function(){
 	  		$("#video_container").fadeOut("slow");
 	  		$("#video").html("");
 	  	});
-	};
+	}; 
 
 	client.init( urlid, {
 		success: function onSuccess( api ){
