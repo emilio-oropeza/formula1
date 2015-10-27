@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimal-ui">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,700,900' rel='stylesheet' type='text/css'>
+		<link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet" type="text/css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+		<style>
+			html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+				background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+				border: 0 none;
+				font-size: 100%;
+				margin: 0;
+				outline: 0 none;
+				padding: 0;
+				vertical-align: baseline;
+			}
+		</style>
+		<script type="text/javascript">
+			urlIndepth = "";
+		</script>
+		<script type="text/javascript">
+			if(typeof(sharePopUp) != "function"){
+				function sharePopUp(social, url) {
+					var height = 0;
+					var width = 0;
+					var sn = "";
+					if(social == "fb"){ 
+						height = 370;
+						width = 580;
+					}else if(social == "tw"){
+						height = 220;
+						width = 580;
+					}else if(social == "pin"){
+						height = 480;
+						width = 420;
+					}
+					//clickstats(, , , social);
+					/*if(shareWindow != undefined && shareWindow.closed == false){
+						shareWindow.close();
+					}*/
+					shareWindow = window.open(url, "shareUrl", "status=0,height="+height+",width="+width+",resizable=0,menubar=0");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<script type="text/javascript" src="js/sketchfab-viewer-1.0.0.js"></script>
+		<script type="text/javascript" src="js/formula.js?v=1.0"></script>
+		<link rel="stylesheet" type="text/css" href="css/formula.css?v=1.0">
+		
+		<div id="indepth_content">
+			<iframe src="" id="api-frame" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" width="100%" height="100%"></iframe>
+
+			<div id="video_container">
+				<span id="close">X</span>
+				<div id="video"></div>
+			</div>
+
+			<div id="annotations">
+				<ul>
+					<li class="opciones" opcion="0">Table dance</li>
+					<li class="opciones" opcion="1">OXXO</li>
+					<li class="opciones" opcion="2">Iglesia</li>
+					<li class="opciones" opcion="3">Ticketmaster</li>
+					<li class="opciones" opcion="4">Comercial Mexicana</li>
+				</ul>
+			</div>
+
+		</div>			
+	</body>
+</html>
