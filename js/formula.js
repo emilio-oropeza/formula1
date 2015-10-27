@@ -6,11 +6,11 @@ $(document).ready(function(){
 	var client = new Sketchfab( version, iframe );
 	var showvideo = function(vcode){
 		"use strict";
-		$("#video_container").fadeIn("slow");
-	  	$("#video").html('<iframe width="100%" height="100%"  src="https://www.youtube.com/embed/'+vcode+'?autoplay=1&loop=1&rel=0&wmode=transparent" frameborder="0" allowfullscreen wmode="Opaque"></iframe>');
+		$("#video_container").fadeIn("fast");
+	  	$("#video").html('<iframe width="100%" height="100%"  src="https://www.youtube.com/embed/'+vcode+'?autoplay=1&autospin=0.5" frameborder="0" allowfullscreen ></iframe>');
 
 	  	$("#close").on("click", function(){
-	  		$("#video_container").fadeOut("slow");
+	  		$("#video_container").fadeOut("fast");
 	  		$("#video").html("");
 	  	});
 	}; 
