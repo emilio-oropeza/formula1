@@ -20,9 +20,7 @@ $(document).ready(function(){
 	client.init( urlid, {
 		success: function onSuccess( api ){
 			//api.load();
-		    api.start(function(){
-		    	$(".infoblock").css({"display: none !important"});
-		    });
+		    api.start();
 		    api.addEventListener( 'viewerready', function() {
 		    	$("#annotations").fadeIn("slow");
 		    } );
