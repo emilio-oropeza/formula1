@@ -1,13 +1,142 @@
+@keyframes juan {
+    0%   {opacity: 0;  transform: scale(1.2):}
+    50% {transform: scale(1.2);}
+    100% {opacity: 1;  transform: scale(1);}
+}
+@keyframes logo {
+    0%   {opacity: 0;  }
+    100% {opacity: 1;  }
+}
+@keyframes text_animation {
+    0%   {opacity: 0;  }
+    100% {opacity: 1;  }
+}
+@keyframes boton_animation {
+    from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    opacity: 0;
+    background-image: url(../images/BTN_Explorar.png);
+  }
+
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+    
+    
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+    background-image: url(../images/BTN_ExplorarOVER.png);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+    
+  }
+
+  65% {
+    -webkit-transform: scale3d(.95, 1.05, 1);
+    transform: scale3d(.95, 1.05, 1);
+    opacity: 1;
+  }
+
+  75% {
+    -webkit-transform: scale3d(1.05, .95, 1);
+    transform: scale3d(1.05, .95, 1);
+    background-image: url(../images/BTN_Explorar.png);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+}
+
 #indepth_content {
     width: 100%;
     height: 100%;
     position: relative;
 }
+#indepth_portada {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 100;
+    background-image: url("../images/IMG_Efecto.png");
+}
+	#portada_content {
+	    width: 775px;
+	    margin: auto;
+	    height: 360px;
+	    margin-top: 70px;
+	    display: none;
+	}
+	.items_portada {
+	    width: 100%;
+	    background-position: center center;
+	    background-repeat: no-repeat;
+	}
+	#portada_juan {
+	    background-image: url("../images/IMG_Juanfutbol.png");
+	    height: 58px;
+		animation-name: juan;
+		-webkit-animation-name: juan;
+	    animation-duration: 2s;
+	}
+	#portada_logo {
+	    background-image: url("../images/IMG_LogoPortada.png");
+	    height: 89px;
+	    margin-top: 18px;
+	    animation-name: logo;
+		-webkit-animation-name: logo;
+	    animation-duration: 2s;
+	    animation-delay: 2.5s;
+	    opacity: 0;
+	    animation-fill-mode: forwards;
+	}
+	#portada_txt {
+	    width: 623px;
+	    text-align: center;
+	    margin: auto;
+	    color: rgb(255, 255, 255);
+	    font-size: 18px;
+	    font-family: "Roboto Condensed",sans-serif;
+	    margin-top: 22px;
+		animation-name: text_animation;
+		-webkit-animation-name: text_animation;
+	    animation-duration: 2s;
+	    animation-delay: 5s;
+	    opacity: 0;
+	    animation-fill-mode: forwards;
+	}
+	#portada_btn {
+	    background-image: url("../images/BTN_Explorar.png");
+	    height: 48px;
+	    width: 192px;
+	    margin: auto;
+	    cursor: pointer;
+	    margin-top: 22px;
+	    animation-name: boton_animation;
+		-webkit-animation-name: boton_animation;
+	    animation-duration: 2s;
+	    animation-delay: 7.5s;
+	    opacity: 0;
+	    animation-fill-mode: forwards;
+	}
+	#portada_btn:hover{
+	    background-image: url("../images/BTN_ExplorarOVER.png");
+	}
 #model_header {
     height: 33px;
     position: absolute;
     top: 30px;
     width: 100%;
+    display: none;
 }
 	#header_container {
 	    width: 970px;
@@ -38,33 +167,51 @@
     z-index: 10;
     display: none;
 }
-#video_container{
-	position: absolute;
-	left: 0;
-	right: 0;
-	height: 100%;
-	width: 970px;
-	margin: auto;
+	#video_container{
+		position: relative;
+		height: 100%;
+		width: 970px;
+		margin: auto;
+	}
+	#video {
+	    width: 970px;
+	    height: 546px;
+	    position: absolute;
+	    margin: auto;
+	    top: 0px;
+	    bottom: 0px;
+	    left: 0px;
+	    right: 0px;
+	}
+	#close {
+		width: 39px;
+	    height: 27px;
+	    display: inline-block;
+	    position: absolute;
+	    right: 0;
+	    top: 10%;
+	    cursor: pointer;
+	    background-image: url("../images/IMG_Tache.png");
+	    background-size: 100%;
+	    background-repeat: no-repeat;
+	}
+@media(max-width: 950px){
+	#video_container {
+	    width: 90%;
+	}
+	#video {
+	    width: 100%;
+	    height: 60vh;
+	}
 }
-#video {
-    width: 970px;
-    height: 546px;
-    position: absolute;
-    margin: auto;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-}
-#close {
-	width: 39px;
-    height: 27px;
-    display: inline-block;
-    position: absolute;
-    right: 0;
-    top: 10%;
-    cursor: pointer;
-    background-image: url("../images/IMG_Tache.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
+@media(max-width: 780px){
+	#portada_content {
+	    width: 100%;
+	}
+	#portada_logo {
+	    background-size: 100% auto;
+	}
+	#portada_txt {
+	    width: 80%;
+	}
 }

@@ -20,10 +20,49 @@ $(document).ready(function(){
 	client.init( urlid, {
 		success: function onSuccess( api ){
 			//api.load();
-		    api.start();
+		    //api.start();
+		    var stop = false;
+		    
+			var target =  [ -0.060404333889703, -0.38451381663266704, -0.070695029163672 ];
+
+		    var cameraList = [ {
+		        eye: [ 3.4087849645575106, -5.142584345761795, 3.1022010936679654 ]
+		    }, {
+		        eye: [ -0.353268380644149, -6.233664913054986, 3.1022010936679654 ]
+		    }, {
+		        eye: [ -4.230155762027332, -4.353792751958628, 3.1022010936679654 ]
+		    }, {
+		        eye: [ -5.848593207078557, -0.21471728576659252, 3.1022010936679654 ]
+		    }, {
+		        eye: [ -3.863199597011962, 3.9376079692259736, 3.1022010936679654 ]
+		    }, {
+		        eye: [ 0.1037913394046463, 5.403836640320315, 3.1022010936679654 ]
+		    }, {
+		        eye: [ 4.34448594226677, 3.268522048256323, 3.1022010936679654 ]
+		    }, {
+		        eye: [ 5.712718197451071, -0.8334733703537267, 3.1022010936679654 ]
+		    } ];
+
+		    var currentCamera = 5;
+
+		    var loop = function () {
+		    	if(!stop){
+			        currentCamera++;
+			        api.lookat( cameraList[ currentCamera % 8 ].eye, target, 4 );
+			        setTimeout( loop, 5000 );
+			    }
+		    }
+
+		    api.start( loop );
+
 		    api.addEventListener( 'viewerready', function() {
-		    	$("#annotations").fadeIn("slow");
-		    } );
+		    	$("#portada_content").fadeIn("slow");
+
+		    	$("#portada_btn").on("click", function(){
+		    		$("#indepth_portada").fadeOut("fast");
+		    		stop=true;
+		    	});
+		    });
 		    api.addEventListener( 'annotationFocus', function( index ) {
 			    //console.log( index );
 				api.getCameraLookAt( function( err, camera ){
@@ -43,8 +82,7 @@ $(document).ready(function(){
 						showvideo("CzskNOQ0AbU");
 					}
 				});
-			} );
-
+			} );			
 		},
 		error: function onError() {
 		    console.log( 'Viewer error' );
