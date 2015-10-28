@@ -1,26 +1,35 @@
 #indepth_content {
     width: 100%;
-    height: 500px;
+    height: 100%;
     position: relative;
 }
-#annotations {
+#model_header {
+    height: 33px;
     position: absolute;
-    width: 200px;
-    height: 100px;
-    bottom: 0px;
-    font-family: 'Roboto', sans-serif;
-    display: none;
+    top: 0px;
+    width: 100%;
 }
-.opciones {
-    background-color: rgba(0,0,0,0.8);
-    cursor: pointer;
-    color: #FFFFFF;
-}
-.opciones:hover {
-    background-color: rgba(255,255,255,0.8);
-    color: #000000;
-}
-#video_container {
+	#header_container {
+	    width: 970px;
+	    height: 100%;
+	    margin: auto;
+	}
+	.header_items {
+	    background-repeat: no-repeat;
+	    height: 33px;
+	    background-size: 100%;
+	}
+	#logo_header {
+	    background-image: url("../images/IMG_LogoHeader.png");
+	    width: 288px;
+	    float: left;
+	}
+	#juan_header {
+	    background-image: url("../images/IMG_juanfutbolHeader.png");
+	    width: 126px;
+	    float: right;
+	}
+#model_video_display {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -29,9 +38,17 @@
     z-index: 10;
     display: none;
 }
+#video_container{
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 970px;
+	margin: auto;
+}
 #video {
-    width: 600px;
-    height: 400px;
+    width: 970px;
+    height: 546px;
     position: absolute;
     margin: auto;
     top: 0px;
@@ -40,13 +57,14 @@
     right: 0px;
 }
 #close {
+	width: 39px;
+    height: 27px;
     display: inline-block;
-    font-family: "Roboto Condensed", sans-serif;
-    color: #FFFFFF;
-    font-size: 45px;
-    font-weight: 100;
     position: absolute;
-    right: 20%;
+    right: 0;
     top: 10%;
     cursor: pointer;
+    background-image: url("../images/IMG_Tache.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
