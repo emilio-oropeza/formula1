@@ -19,8 +19,6 @@ $(document).ready(function(){
 
 	client.init( urlid, {
 		success: function onSuccess( api ){
-			//api.load();
-		    //api.start();
 		    var stop = false;
 		    
 			var target =  [ -0.060404333889703, -0.38451381663266704, -0.070695029163672 ];
