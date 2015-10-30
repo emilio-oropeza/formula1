@@ -60,9 +60,6 @@
 #indepth_content {
     width: 100%;
     height: 100%;
-    position: absolute;
-    top: 0;
-    z-index: -1;
 }
 #indepth_portada {
     width: 100%;

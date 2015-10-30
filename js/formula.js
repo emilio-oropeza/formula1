@@ -1,5 +1,11 @@
 $(document).ready(function(){
 
+	function resize(){
+		$("#indepth_content").height("100%");
+		$("#indepth_content").height($("#indepth_content").height()-60);
+		$("#indepth_portada").height($("#indepth_content").height());
+	}
+
 	var iframe = document.getElementById( 'api-frame' );
 	var version = '1.0.0';
 	var urlid = '20402f91260d4c30af9b89e7685c4bf5';
@@ -14,12 +20,17 @@ $(document).ready(function(){
 	  		$("#video").html("");
 	  	});
 	}; 
+	
+	resize();
+	$(window).resize(function(){
+		resize();
+	});
 
 	var stop = false;
 	$("#portada_btn").on("click", function(){
-		    		$("#indepth_portada").fadeOut("fast");
-		    		stop=true;
-		    	});
+		$("#indepth_portada").fadeOut("fast");
+		stop=true;
+	});	
 
 	client.init( urlid, {
 		success: function onSuccess( api ){
