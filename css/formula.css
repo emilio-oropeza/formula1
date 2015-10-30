@@ -129,6 +129,7 @@
 	    animation-delay: 7.5s;
 	    opacity: 0;
 	    animation-fill-mode: forwards;
+	    z-index: 100
 	}
 	#portada_btn:hover{
 	    background-image: url("../images/BTN_ExplorarOVER.png");
