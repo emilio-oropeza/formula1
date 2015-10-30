@@ -68,16 +68,14 @@ $(document).ready(function(){
 					var strtarget = camtarget.toString();
 					var strsmall = strtarget.substr(0, 7);
 
-					if( strsmall == -1.0880){
-						showvideo("CzskNOQ0AbU");
-					}else if( strsmall == -3.0378){
-						showvideo("CzskNOQ0AbU");
+					if( strsmall == -3.0378){
+						showvideo("SDzcxtrRiQI");
 					}else if( strsmall == -3.3181){
-						showvideo("CzskNOQ0AbU");
+						showvideo("GYJ0y1Z-Q2U");
 					}else if( strsmall == 1.83145){
-						showvideo("CzskNOQ0AbU");
+						showvideo("lH1s5YspZ-M");
 					}else if( strsmall == -0.2837){
-						showvideo("CzskNOQ0AbU");
+						showvideo("QEfsEJTf1KQ");
 					}
 				});
 			} );			
