@@ -56,10 +56,9 @@
     opacity: 1;
   }
 }
-
 #indepth_content {
     width: 100%;
-    height: 100%;
+    position: relative;
 }
 #indepth_portada {
     width: 100%;
@@ -158,6 +157,9 @@
 	    width: 126px;
 	    float: right;
 	}
+#model_frame {
+    height: 100%;
+}
 #model_video_display {
     position: absolute;
     width: 100%;
@@ -195,6 +197,11 @@
 	    background-size: 100%;
 	    background-repeat: no-repeat;
 	}
+@media(max-width: 970px){
+	#header_container{
+		width: 100%;
+	}
+}
 @media(max-width: 950px){
 	#video_container {
 	    width: 90%;
@@ -227,6 +234,14 @@
 	#portada_txt {
 	    width: 100%;
 	    margin: 10px auto auto;
+	}
+	#logo_header {
+	    width: 100%;
+	    background-size: auto 100%;
+	    background-position: center;
+	}
+	#juan_header {
+		display: none;
 	}
 }
 @media(max-height: 500px){

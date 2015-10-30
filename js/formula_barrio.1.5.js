@@ -1,9 +1,10 @@
 $(document).ready(function(){
-
+	$("#indepth_content").height($(window).height());
 	function resize(){
-		$("#indepth_content").height("100%");
+		$("#indepth_content").height($(window).height());
 		$("#indepth_content").height($("#indepth_content").height()-60);
 		$("#indepth_portada").height($("#indepth_content").height());
+		$("#indepth_model").height($("#indepth_content").height());
 	}
 
 	var iframe = document.getElementById( 'api-frame' );
@@ -21,6 +22,9 @@ $(document).ready(function(){
 	  	});
 	}; 
 	
+	$("#nav-bar-stats").hide();
+	$("#mobile-horizontal-menu").remove();
+
 	resize();
 	$(window).resize(function(){
 		resize();
@@ -29,6 +33,7 @@ $(document).ready(function(){
 	var stop = false;
 	$("#portada_btn").on("click", function(){
 		$("#indepth_portada").fadeOut("fast");
+		$("#header_container").fadeIn("fast");
 		stop=true;
 	});	
 
