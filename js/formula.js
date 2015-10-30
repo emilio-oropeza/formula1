@@ -15,11 +15,15 @@ $(document).ready(function(){
 	  	});
 	}; 
 
-
+	var stop = false;
+	$("#portada_btn").on("click", function(){
+		    		$("#indepth_portada").fadeOut("fast");
+		    		stop=true;
+		    	});
 
 	client.init( urlid, {
 		success: function onSuccess( api ){
-		    var stop = false;
+		    
 		    
 			var target =  [ -0.060404333889703, -0.38451381663266704, -0.070695029163672 ];
 
@@ -56,10 +60,7 @@ $(document).ready(function(){
 		    api.addEventListener( 'viewerready', function() {
 		    	$("#portada_content").fadeIn("slow");
 
-		    	$("#portada_btn").click(function(){
-		    		$("#indepth_portada").fadeOut("fast");
-		    		stop=true;
-		    	});
+		    	
 		    });
 		    api.addEventListener( 'annotationFocus', function( index ) {
 			    //console.log( index );
