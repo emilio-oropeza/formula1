@@ -56,7 +56,7 @@ $(document).ready(function(){
 		    api.addEventListener( 'viewerready', function() {
 		    	$("#portada_content").fadeIn("slow");
 
-		    	$("#portada_btn").on("click", function(){
+		    	$("#portada_btn").click(function(){
 		    		$("#indepth_portada").fadeOut("fast");
 		    		stop=true;
 		    	});
